@@ -60,8 +60,8 @@ git checkout [브랜치명]
 1. master
 2. main 
 
-main에서 파일 변경 > add > commit  > push
-checkout으로 master 브랜치로 변경 > git merge main > add > commit > push
+main에서 파일 변경 > add > commit  > git push orgin main
+checkout으로 master 브랜치로 변경 > git merge main > add > commit > git push origin master
 
 
 
