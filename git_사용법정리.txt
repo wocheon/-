@@ -15,7 +15,10 @@ git config - -global - -list
 
 
 4.github repository (외부저장소) 연결 
-  git remote add origin [git_repositroy_주소]
+git remote add origin [git_repositroy_주소]
+
+5. branch 지정 
+git branch main
 
 5.연결 확인 
 git remote -v 
@@ -32,7 +35,6 @@ git commit -m "upload"
 7. push 
 git push origin master
 
-
 -원격저장소 연결 해제 
 git remote remove origin
 
@@ -42,5 +44,14 @@ ls -la 로 .git 폴더 확인 후 rm -rf .git
 -이전 commit 내용 삭제
 git rebase -i {제거하려고 하는 커밋의 직전 커밋 id}
 
--원격저장소 내용복제 
+-원격저장소 복제 
 git clone <저장소 url>
+
+-git clone 해제
+git remote remove origin
+or 
+.git 디렉토리 삭제
+
+-branch 변경 
+git checkout [브랜치명]
+
