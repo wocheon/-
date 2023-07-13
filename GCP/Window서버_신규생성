@@ -2,8 +2,6 @@
 
 기존 커스텀 이미지로 생성시 단독테넌트노드를 생성해야함. 
 이는 비용발생이 크게 증가하므로 Window Server를 올릴 다른 방법을 도출.
-*테스트 결과 중첩가상화(GCP VM에 KVM, VirtualBOX를 올려서 사용)는 성능저하가 심하게 발생하여 실제 사용은 어려움
- Windows가 아닌 리눅스를 올리는 것은 가능할것 같긴함...
 
 [test]
 사용 이미지 : Ubuntu 20.04
@@ -70,6 +68,16 @@ ResultAny=no
 ResultInactive=no
 ResultActive=yes
 #############################################################################
+
+	7.xrdp 검은화면 발생방지 
+vi /etc/xrdp/startwm.sh	
+################################################
+unset DBUS_SESSION_BUS_ADDRESS 
+unset XDG_RUNTIME_DIR 
+. $HOME/.profile
+################################################
+
+
 
 	service xrdp restart
 
