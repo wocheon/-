@@ -64,7 +64,7 @@ main에서 파일 변경 > add > commit  > git push orgin main
 checkout으로 master 브랜치로 변경 > git merge main > add > commit > git push origin master
 
 
-
+$ git log --branches --oneline
 
 
 
