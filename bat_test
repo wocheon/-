@@ -1,0 +1,33 @@
+@echo off  
+echo '---List---'
+echo '1) number'
+echo '2) string'
+
+set /p num="number? : "
+
+IF %num%==1 (
+	set var=number1
+)ELSE IF %num%==2 (
+	set var=number2
+)Else (
+	set var=number3
+	)
+	
+echo "Result : %var%"	
+
+
+pause
+
+
+@echo off  
+
+:: echo for_test_1
+:: set /p num="Max number? : "
+
+:: for /L %%i in (1,1,%num%) do echo %%i
+
+echo for_test_2
+
+for /f %%i in ('dir') do (echo %%i)
+
+pause 
